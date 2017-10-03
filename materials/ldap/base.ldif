@@ -1,0 +1,91 @@
+dn: dc=example,dc=com
+dc: example
+objectClass: top
+objectClass: domain
+objectClass: domainRelatedObject
+associatedDomain: example.com
+
+dn: ou=Hosts,dc=example,dc=com
+ou: Hosts
+objectClass: top
+objectClass: organizationalUnit
+objectClass: domainRelatedObject
+associatedDomain: example.com
+
+dn: ou=Rpc,dc=example,dc=com
+ou: Rpc
+objectClass: top
+objectClass: organizationalUnit
+objectClass: domainRelatedObject
+associatedDomain: example.com
+
+dn: ou=Services,dc=example,dc=com
+ou: Services
+objectClass: top
+objectClass: organizationalUnit
+objectClass: domainRelatedObject
+associatedDomain: example.com
+
+dn: nisMapName=netgroup.byuser,dc=example,dc=com
+nismapname: netgroup.byuser
+objectClass: top
+objectClass: nisMap
+objectClass: domainRelatedObject
+associatedDomain: example.com
+
+dn: ou=Mounts,dc=example,dc=com
+ou: Mounts
+objectClass: top
+objectClass: organizationalUnit
+objectClass: domainRelatedObject
+associatedDomain: example.com
+
+dn: ou=Networks,dc=example,dc=com
+ou: Networks
+objectClass: top
+objectClass: organizationalUnit
+objectClass: domainRelatedObject
+associatedDomain: example.com
+
+dn: ou=People,dc=example,dc=com
+ou: People
+objectClass: top
+objectClass: organizationalUnit
+objectClass: domainRelatedObject
+associatedDomain: example.com
+
+dn: ou=Group,dc=example,dc=com
+ou: Group
+objectClass: top
+objectClass: organizationalUnit
+objectClass: domainRelatedObject
+associatedDomain: example.com
+
+dn: ou=Netgroup,dc=example,dc=com
+ou: Netgroup
+objectClass: top
+objectClass: organizationalUnit
+objectClass: domainRelatedObject
+associatedDomain: example.com
+
+dn: ou=Protocols,dc=example,dc=com
+ou: Protocols
+objectClass: top
+objectClass: organizationalUnit
+objectClass: domainRelatedObject
+associatedDomain: example.com
+
+dn: ou=Aliases,dc=example,dc=com
+ou: Aliases
+objectClass: top
+objectClass: organizationalUnit
+objectClass: domainRelatedObject
+associatedDomain: example.com
+
+dn: nisMapName=netgroup.byhost,dc=example,dc=com
+nismapname: netgroup.byhost
+objectClass: top
+objectClass: nisMap
+objectClass: domainRelatedObject
+associatedDomain: example.com
+
