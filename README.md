@@ -110,7 +110,7 @@ lab.example.com:/home/guests 172.25.0.0/255.255.255. 0
 
 ## 4. Thanks
 
-**Many thanks to those great Open Source Projects. We standing on the shoulders of giants.**
+**Many thanks to those great open source projects. We standing on the shoulders of giants.**
 
 [Oracle VM VirtualBox](https://www.virtualbox.org/)
 
