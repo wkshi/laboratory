@@ -6,7 +6,6 @@ SUBJECT_PREFIX="/C=CN/ST=Shaanxi/L=Xi'an/O=Example, Inc."
 DOMAIN="example.com"
 PUBTLS=/var/www/html/pub/tls
 mkdir -p ${PUBTLS}/{certs,private}
-umask 077
 for SERVER in server www webapp; do
     SUBJECT="${SUBJECT_PREFIX}/CN=${SERVER}.${DOMAIN}"
     KEY="${PUBTLS}/private/${SERVER}.key"
