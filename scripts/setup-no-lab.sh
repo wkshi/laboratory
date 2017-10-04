@@ -16,3 +16,5 @@ systemctl restart network NetworkManager
 # Make sure internal dns the first
 sed -i /main/a\dns=none /etc/NetworkManager/NetworkManager.conf
 sed -i -e "/172.25.0.254/d" -e "/search/a\nameserver 172.25.0.254" -e "s/NetworkManager/wkshi/g" /etc/resolv.conf
+# Hint info
+echo "Visit http://172.25.0.254 to more infomation." >> /etc/motd
