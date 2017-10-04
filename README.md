@@ -1,6 +1,6 @@
 # Project laboratory
 
-Project laboratory is providing a virtual environment by vagrant.
+Project laboratory is providing a virtual environment by vagrant. A sandbox to practice your linux skills.
 
 ## 1. Download needed software
 
@@ -29,6 +29,8 @@ Suggestion to use libvirt as vagrant provider in linux, for mac & windows, Virtu
 # vagrant up
 ~~~
 
+**Do not use vagrant manage laboratory, use provider(VirtualBox or others) 's manage tool do this.**
+
 **Destroy laboratory**
 
 ~~~bash
@@ -46,7 +48,7 @@ Suggestion to use libvirt as vagrant provider in linux, for mac & windows, Virtu
 |server.example.com|Vagrant default|172.25.0.11|192.168.0.111/112|
 |desktop.example.com|Vagrant default|172.25.0.10|192.168.0.101/102|
 
-**NTP & DNS Server:**
+**NTP & DNS server:**
 
 lab.example.com
 
@@ -63,14 +65,14 @@ lab.example.com
 **CA Certificate:**
 http://lab.example.com/pub/example-ca.crt
 
-**TLS certificate:**
+**TLS Certificate:**
 http://lab.example.com/pub/tls/certs
 
-**TLS private key:**
+**TLS Private Key:**
 http://lab.example.com/pub/tls/private
 
 
-**ldap & kerberos Configure:**
+**Ldap & Kerberos Configure:**
 
 **TLS:** http://lab.example.com/pub/EXAMPLE-CA-CRT
 
@@ -84,9 +86,9 @@ http://lab.example.com/pub/tls/private
 
 **Admin Server:** lab.example.com
 
-**Keytab files:** http://lab.example.com/pub/keytabs
+**Keytab Files:** http://lab.example.com/pub/keytabs
 
-**ldap User:**
+**Ldap User:**
 
 |Username|Password|Home directory|
 |-|-|-|
@@ -104,8 +106,8 @@ lab.example.com:/home/guests 172.25.0.0/255.255.255. 0
 
 ~~~bash
 # cd laboratory
-# ssh -i .ssh/id_rsa root@server.example.com
-# ssh -i .ssh/id_rsa root@desktop.example.com
+# ssh -i .ssh/id_rsa root@172.25.0.11
+# ssh -i .ssh/id_rsa root@172.25.0.10
 ~~~
 
 ## 4. Thanks
