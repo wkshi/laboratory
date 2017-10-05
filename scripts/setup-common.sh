@@ -10,11 +10,6 @@ echo redhat | passwd --stdin root &> /dev/null
 # Open passwd auth
 sed -i "/PasswordAuthentication no/d" /etc/ssh/sshd_config
 systemctl restart sshd
-# Use 163 repo
-mkdir /etc/yum.repos.d/backup/
-mv /etc/yum.repos.d/*.repo /etc/yum.repos.d/backup/
-curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo 
-yum clean all
 # Enable firewalld
 systemctl enable firewalld
 systemctl start firewalld
