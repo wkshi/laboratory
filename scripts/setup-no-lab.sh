@@ -9,12 +9,12 @@ sed -i "/^NETMASK/a\DNS1=172.25.0.254" /etc/sysconfig/network-scripts/ifcfg-eth1
 # eth1 172.25.0.11    172.25.0.10
 # eth2 192.168.0.111  192.168.0.101
 # eth3 192.168.0.112  192.168.0.102
-sed -i /^NM_CONTROLLED/s/no/yes/g /etc/sysconfig/network-scripts/ifcfg-eth1
-sed -i /^NM_CONTROLLED/s/no/yes/g /etc/sysconfig/network-scripts/ifcfg-eth2
-sed -i /^NM_CONTROLLED/s/no/yes/g /etc/sysconfig/network-scripts/ifcfg-eth3
+sed -i "/^NM_CONTROLLED/s/no/yes/g" /etc/sysconfig/network-scripts/ifcfg-eth1
+sed -i "/^NM_CONTROLLED/s/no/yes/g" /etc/sysconfig/network-scripts/ifcfg-eth2
+sed -i "/^NM_CONTROLLED/s/no/yes/g" /etc/sysconfig/network-scripts/ifcfg-eth3
 systemctl restart network NetworkManager
 # Make sure internal dns the first
-sed -i "/\[main\]/a\dns=none" /etc/NetworkManager/NetworkManager.conf
+sed -i -e "/PERSISTENT_DHCLIENT/d" -e "/^TYPE/a\PEERDNS=no" /etc/sysconfig/network-scripts/ifcfg-eth0
 sed -i -e "/172.25.0.254/d" -e "/search/a\nameserver 172.25.0.254" -e "s/NetworkManager/wkshi/g" /etc/resolv.conf
 # Hint info
 echo "Visit http://172.25.0.254 to more infomation." >> /etc/motd
