@@ -28,4 +28,6 @@ firewall-cmd --permanent --add-service=nfs
 firewall-cmd --permanent --add-service=rpc-bind
 firewall-cmd --permanent --add-service=mountd
 firewall-cmd --permanent --add-service=ntp
+firewall-cmd --permanent --add-port=123/udp
+firewall-cmd --permanent --add-port=323/udp
 firewall-cmd --reload
